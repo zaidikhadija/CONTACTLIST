@@ -10,9 +10,9 @@ const ContactList =()=>{
         dispatch(getContacts)},[])
         const contacts=useSelector(state=>state.contacts)
         return (
-            <div>
+            <div  style={{display:"flex",flexWrap:"wrap"}}>
 {
-        contacts.map(contact=> <CardContact key ={contact._id} contact={contact} />)
+       contacts&& contacts.map(contact=> <CardContact key ={contact._id} contact={contact} />)
 }
             </div>
         )

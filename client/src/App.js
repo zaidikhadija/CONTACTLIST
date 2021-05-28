@@ -3,7 +3,7 @@ import './App.css';
 import Nav from "./Components/Nav";
 import ContactList from "./Components/ContactList";
 import {Route} from "react-router-dom";
-import CardContact from "./Components/CardContact"
+import { AddContact } from './Components/AddContact';
 
 
 function App() {
@@ -11,7 +11,9 @@ function App() {
     <div className="App">
     <Nav />
     <Route path="/contact List" component={ContactList} />
-    <CardContact />
+    
+    <Route path="/addcontact" component={AddContact} />
+    
     </div>
   );
 }
